@@ -1,0 +1,1111 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background:#412720;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+
+nav a{
+    color: #EFEBE4;
+    font-size: 35px;
+    font-family:'League Gothic', sans-serif; 
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:#EFEBE4;
+    font-size: 18px;
+    padding: 7px 13px;
+    font-family:'Roboto', sans-serif;
+    
+    
+    
+}
+li a.active,li a:hover{
+    color:#EFEBE4;
+    text-decoration: underline;}
+
+.checkbtn{
+    font-size: 30px;
+    color:#EFEBE4;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/*-----------------drop---------------------*/
+
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#EFEBE4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color:#412720;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color:#EFEBE4;
+    color: #412720;
+ 
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+/*-------------fin ----drop---------------------*/
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#EFEBE4;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: #412720;
+    }
+    li a:hover, li a.active{
+        background:none;
+        color: #412720;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+
+/*-----------fin nav---------------*/
+
+
+        
+
+
+/* foto portada y frase home menu tragos cerveza y carta*/
+.principal{
+    width: 100%; 
+    height: 70vh;
+}
+.principal{
+    font-family:'League Gothic', sans-serif; 
+    font-size: 60px;
+    align-items: center;
+    justify-content:center;
+    background-image: url(../imagenes/portada.jpg);
+    background-position:center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display:flex;
+    color: #EFEBE4;
+}
+
+
+/* veni a conocernos*/
+.secundario>.veniaconocernos{
+    text-align: center;
+    width: 100%;
+    
+}
+
+
+/* veni a conocernos*/
+.veniaconocernos > h2 {
+    font-size: 55px;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    background-color: #EFEBE4;
+    color: #412720;
+    font-family:'League Gothic', sans-serif;
+    border: 10px solid #412720;
+    
+}
+
+
+
+/*---------------------------------------------------------------------*/
+
+
+
+
+.grid-container img {
+    width: 100%; /* need to overwrite inline dimensions */
+    height:270px;
+    border: 8px solid #412720;
+    margin: 10px;
+
+
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+    padding: 20px;
+    border: 8px solid #412720;
+
+  }
+/* hover styles */
+.location-listing {
+    position: relative;
+  }
+  
+  .location-image {
+    line-height: 0;
+    overflow: hidden;
+  }
+  
+  .location-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+  }
+  
+  .location-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(73, 70, 67, 0.4);
+    color: white;
+    font-family:'League Gothic', sans-serif;
+    
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location-listing:hover .location-title {
+    opacity: 1;
+  }
+  
+  .location-listing:hover .location-image img {
+    filter: blur(2px);
+  }
+  
+  
+  /* for touch screen devices */
+  @media (hover: none) { 
+    .location-title {
+      opacity: 1;
+    }
+    .location-image img {
+      filter: blur(2px);
+    }
+  }
+
+/* Medios de pago */
+
+.titulomediosdepago > h2{
+    color: #412720;
+    font-family:'League Gothic', sans-serif;
+    font-size: 55px;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: left;
+    margin: 50px;
+}
+
+.titulomediosdepago > .medio{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.medio{
+    background-color: #EFEBE4;
+    border: 8px solid #412720;
+    margin: 50px;
+}
+.titulomediosdepago > .medio> .medio-1>h3{
+    width: 100%;
+    height:50px;
+    color: #412720;
+    font-size: 40px;
+    text-align: center;
+    margin: 25px;
+    display: flex;
+    padding: auto;
+    position: relative;
+    
+}
+
+ /* pie del sitio */
+ 
+ .footerinicio {
+   
+    bottom: 0;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+}
+
+.footerinicio {
+    background-color:#412720;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-family:'Roboto', sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footerinicio.footer-left, .footerinicio .footer-center, .footerinicio.footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footerinicio .footer-left {
+    width: 30%;
+}
+
+.footerinicio h3 {
+    color:#EFEBE4;
+    margin: 10px;
+    font-family:'League Gothic', sans-serif;
+    font-size: 35px;
+   
+}
+
+.footerinicio h3 img{
+    margin: 0 5px;;
+}
+
+
+/* Footer links */
+
+.footerinicio .footer-links {
+    color:#EFEBE4;
+    margin: 20px 0 12px;
+}
+
+.footerinicio .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:#EFEBE4;
+}
+
+.footerinicio .footer-company-name {
+    color:#EFEBE4;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 10px;
+    font-family:'Roboto', sans-serif;
+}
+
+/* Footer Center */
+
+.footerinicio.footer-center {
+    width: 35%;
+}
+
+.footerinicio .footer-center i {
+    background-color:#EFEBE4;
+    color:#412720;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footerinicio .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footerinicio .footer-center p {
+    display: inline-block;
+    color:#EFEBE4;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.footerinicio.footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footerinicio .footer-center p a {
+    color:#EFEBE4;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footerinicio.footer-right {
+    width: 30%;
+}
+
+
+.footerinicio.footer-icons {
+    margin-top: 25px;
+}
+
+
+.footerinicio.footer-icons p{
+    font-family:'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 25px;;
+    color: #EFEBE4;
+}
+.footerinicio.footer-icons a {
+    display:inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:#EFEBE4;
+    border-radius: 2px;
+    font-size: 20px;
+    color:#412720;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footerinicio .footer-icons a:hover {
+    background-color:#412720;
+    color: #EFEBE4;
+    
+}
+
+.footer-links a:hover {
+    color:#412720;
+}
+
+@media (max-width: 880px) {
+    .footerinicio .footer-left, .footerinicio .footer-center, .footerinicio.footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footerinicio.footer-center i {
+        margin-left: 0;
+    }
+}       
+
+
+
+
+
+
+
+ 
+
+
+
+/*-------Tablet------*/
+
+@media screen and (max-width: 768px) {
+
+/* galeria de fotos del home*/
+
+.galeriahome {
+    flex-direction: column;
+    width: 100%;
+  }
+.galeriahome img{
+    width: 100%;
+    height: auto;
+  }
+
+/* Medios de pago */
+
+.titulomediosdepago > .medio{
+    flex-direction: column; 
+}
+.titulomediosdepago > .medio> .medio-1>h3{
+    width: 100%;
+    height:40px;
+    margin: 10px;
+}
+
+}
+
+
+/*--------------------MENU-----------------------------------------------------------------------*/
+.principalmenu{
+    width: 100%; 
+    height: 60vh;
+}
+.principalmenu{
+    font-family:'League Gothic', sans-serif; 
+    font-size: 60px;
+    align-items: center;
+    justify-content:center;
+    background-image: url(../imagenesmenu/portadamenu4.jpg);
+    background-position:center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    color: #EFEBE4;
+}
+/* galeria de fotos del menu*/
+.galeriamenu {
+ 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    float: left;
+    width: 100%;
+    background-color: #fff;
+  }
+  .galeriamenu img{
+    justify-content: space-between;
+    width: 100%;
+    height:330px;
+    margin:30px 25px;
+    object-fit: cover;
+  }
+
+
+  .galeriamenu h4{
+    
+    text-align: center;
+    color: #412720;
+    font-size: 30px;
+    font-family:'League Gothic', sans-serif;
+  }
+  
+  
+.responsive {
+    padding: 35px 77px;
+    float: left;
+    width: 33,3333%
+  }
+
+  
+@media only screen and (max-width: 768px) {
+    .responsive {
+      width:100%;
+      margin: 10px 10x;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/*--------------------------contacto-------------------------------*/
+.tituloscontacto{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tituloscontacto h2{
+    color:#412720;
+    font-size: 50px;
+    font-family:'League Gothic', sans-serif;
+    text-transform: uppercase;
+    margin: 120px 60px ;
+
+}
+
+.tituloscontacto h3{
+    background-color: #412720;
+    color: #EFEBE4;
+    font-size: 50px;
+    font-family:'League Gothic', sans-serif;
+    text-transform: uppercase;
+    width: 300px;
+    margin: 120px 60px ;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.footercontacto {
+   
+    bottom: 0;
+}
+
+
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+}
+.tituloscontacto{
+  
+    
+    flex-direction: column;
+}
+
+.footercontacto {
+    background-color:#412720;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-family:'Roboto', sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footercontacto.footer-left, .footercontacto .footer-center, .footercontacto.footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footercontacto .footer-left {
+    width: 30%;
+}
+
+.footercontactoh3 {
+    color:#EFEBE4;
+    font-family:'Roboto', sans-serif;
+    margin: 10px;
+    
+}
+
+
+.footercontacto h3 span {
+    color:#EFEBE4;
+    font-family:'League Gothic', sans-serif;
+    font-size: 35px;
+    margin: 10px;
+
+}
+
+/* Footer links */
+
+.footercontacto .footer-links {
+    color:#EFEBE4;
+    margin: 20px 0 12px;
+}
+
+.footercontacto .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:#EFEBE4;
+}
+
+.footercontacto .footer-company-name {
+    color:#EFEBE4;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 10px;
+    font-family:'Roboto', sans-serif;
+}
+
+/* Footer Center */
+
+.footercontacto .footer-center {
+    width: 35%;
+}
+
+.footercontacto .footer-center i {
+    background-color:#EFEBE4;
+    color:#412720;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footercontacto .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footercontacto .footer-center p {
+    display: inline-block;
+    color:#EFEBE4;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.footercontacto .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footercontacto .footer-center p a {
+    color:#EFEBE4;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footercontacto .footer-right {
+    width: 30%;
+}
+
+
+
+.footercontacto .footer-icons {
+    margin-top: 25px;
+}
+
+
+.footercontacto .footer-icons p{
+    font-family:'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 25px;;
+    color: #EFEBE4;
+}
+.footercontacto .footer-icons a {
+    display:inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:#EFEBE4;
+    border-radius: 2px;
+    font-size: 20px;
+    color:#412720;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footercontacto .footer-icons a:hover {
+    background-color:#412720;
+    color: #EFEBE4;
+    
+}
+
+.footer-links a:hover {
+    color:#412720;
+}
+
+@media (max-width: 880px) {
+    .footercontacto .footer-left, .footercontacto .footer-center, .footercontacto.footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footercontacto.footer-center i {
+        margin-left: 0;
+    }
+}       
+
+
+
+/*------------------------------------------------------------TRAGOS--------------------------------------*/
+.principaltragos{
+    width: 100%; 
+    height: 60vh;
+}
+.principaltragos{
+    font-family:'League Gothic', sans-serif; 
+    font-size: 60px;
+    align-items: center;
+    justify-content:center;
+    background-image: url(../imagenestragos//istockphoto-928321242-612x612.jpg);
+    background-position:center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display:flex;
+    color: #EFEBE4;
+}
+
+@media screen and (max-width: 500px) {
+    .wrap{
+        width: 100%;
+        margin: 0;
+      
+}
+
+}
+@media screen and (max-height:800px) {
+    .principaltragos{
+        font-size: 50px;
+        background-image: url(../imagenestragos//istockphoto-928321242-612x612.jpg);
+    
+      
+    }
+    .plato-carta{
+       flex-direction: column;
+      
+        
+      }
+
+}
+
+/** carta de tragos **/
+.cartadetragosfondo{
+    background-image: url(../imagenes/logocremanav.png);
+}
+
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+
+   
+  }
+.wrap-title-section{
+    color:#412720;
+    font-size: 20px;
+    text-align: center;
+    font-family:'League Gothic', sans-serif; 
+}
+  
+  .column-2.carta{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding:10px;
+  }
+  
+  .plato-carta{
+    display: flex;
+    align-items: center;
+    border: 1px solid #EFEBE4;
+    border-radius: 6px;
+    font-family:'Roboto', sans-serif;
+  
+    
+  }
+  
+  .img-plato-carta{
+    display: flex;
+    flex-basis: 25%;
+    justify-content: center;
+  }
+  
+  .img-plato-carta img{
+    max-width: 100px;
+    max-height: 75px;
+  }
+  
+  .title-plato-carta{
+    border: 1px solid #EFEBE4;
+    border-bottom: none;
+    border-top: none;
+    flex-basis: 60%;
+    padding: 0 1rem;
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    color:#412720
+  }
+
+  .title-plato-carta p{
+    font-family:'Roboto', sans-serif;
+    font-size: 15px;
+  }
+  
+  .precio-plato-carta{
+    display: flex;
+    flex-basis: 15%;
+    justify-content: center;
+    font-weight: bold;
+    
+  }
+/*-------------------cervezas---------------*/
+
+    .principalcervezas{
+        width: 100%; 
+        height: 60vh;
+    }
+    .principalcervezas{
+        font-family:'League Gothic', sans-serif; 
+        font-size: 60px;
+        align-items: center;
+        justify-content:center;
+        background-image: url(../imagenescervezas/c1.jpg);
+        background-position:center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        color: #EFEBE4;
+    }
+    
+    /*----------------Carta---------------*/
+
+    .principalcarta{
+        width: 100%; 
+        height: 60vh;
+    }
+    .principalcarta{
+        font-family:'League Gothic', sans-serif; 
+        font-size: 60px;
+        align-items: center;
+        justify-content:center;
+        background-image: url(../imagenescarta/carta3.jpg);
+        background-position:center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        color: #EFEBE4;
+    }
+    
+ /*----------------RESERVAS----------------------------*/
+ .container{
+    width: 100%;
+    background:#EFEBE4;
+    border-radius: 6px;
+    padding: 20px 60px 20px 60px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    
+  }
+  .container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container .content .left-side{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+  }
+  .content .left-side::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afafb6;
+  }
+  .content .left-side .details{
+    margin: 14px;
+    text-align: center;
+    
+  }
+  .content .left-side .details i{
+    font-size: 30px;
+    color:#412720;
+   
+  }
+  .content .left-side .details .topic{
+    font-size: 20px;
+    font-weight: 500;
+    
+    font-family:'League Gothic', sans-serif;
+    
+  }
+  
+  
+  .content .left-side .details .text-one,
+  .content .left-side .details .text-two{
+    font-size: 14px;
+    color:#412720;
+    font-family:'Roboto', sans-serif;
+  }
+  .container .content .right-side{
+    width: 75%;
+    margin-left: 75px;
+  }
+  .content .right-side .topic-text{
+    font-size: 40px;
+    font-weight: 600;
+    color:#412720;
+    font-family:'League Gothic', sans-serif;
+  }
+
+  .content .right-side .topic-text p{
+    font-size: 14px;
+    color:#412720;
+    font-family:'Roboto', sans-serif;
+  }
+  .right-side .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+  }
+  .right-side .input-box input,
+  .right-side .input-box textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background:#fff;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+    font-family:'Roboto', sans-serif;
+  }
+  .right-side .message-box{
+    min-height: 110px;
+  }
+  .right-side .input-box textarea{
+    padding-top: 6px;
+  }
+  .right-side .button{
+    display: inline-block;
+    margin-top: 12px;
+  
+  }
+  .right-side .button input[type="button"]{
+    color:#EFEBE4;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 20px 160px;
+    border-radius: 6px;
+    background:#412720;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family:'Roboto', sans-serif;
+  }
+  .button input[type="button"]:hover{
+    background:#EFEBE4;
+    color: #412720;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  @media (max-width: 950px) {
+    .container{
+      width: 100%;
+      padding: 30px 40px 40px 35px ;
+    }
+    .container .content .right-side{
+     width: 75%;
+     margin-left: 55px;
+  }
+  }
+  @media (max-width: 820px) {
+    .container{
+      margin: 40px 0;
+      height: 100%;
+    }
+    .container .content{
+      flex-direction: column-reverse;
+    }
+   .container .content .left-side{
+     width: 100%;
+     flex-direction: row;
+     margin-top: 40px;
+     justify-content: center;
+     flex-wrap: wrap;
+   }
+   .container .content .left-side::before{
+     display: none;
+   }
+   .container .content .right-side{
+     width: 100%;
+     margin-left: 0;
+   }
+
+   
+}
+  
+.mapa iframe{
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    
+}
+
+.footerinicio .mapa .p{
+    color: #EFEBE4;
+   font-size: 0px;
+    font-family:'Roboto', sans-serif;
+
+}
+     
